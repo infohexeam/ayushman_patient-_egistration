@@ -45,7 +45,7 @@ class RegistrationController extends GetxController {
     DownloadFromOptions(
         icon: AppIcons.playStore, text: "GET IT ON", platform: "Google Play")
   ];
-//=============================================================================>
+//==============================================================================
 
   List<Gender> genderList = [];
   Rx<Gender?> selectedGender = Rx<Gender?>(null);
