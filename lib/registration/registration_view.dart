@@ -109,7 +109,7 @@ class RegistrationScreen extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     SizedBox(
                                       width: 380.sp,
@@ -156,16 +156,14 @@ class RegistrationScreen extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     SizedBox(
                                       width: 380.sp,
                                       child: AppDatePickerFormField(
                                           controller: RegistrationController
                                               .to.controllerDateOfBirth,
-                                          validator: (value) =>
-                                              Validators.isEmpty(value: value),
-                                          header: "DOB*"),
+                                          header: "DOB"),
                                     ),
                                     SizedBox(
                                       width: 380.sp,
@@ -173,9 +171,6 @@ class RegistrationScreen extends StatelessWidget {
                                           builder: (controller) {
                                         return AppDropDownFormField(
                                           header: "Blood Group*",
-                                          validator: (value) =>
-                                              Validators.isEmpty(
-                                                  value: value?.name),
                                           onChange: (value) =>
                                               RegistrationController
                                                   .to
@@ -197,7 +192,7 @@ class RegistrationScreen extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     SizedBox(
                                       width: 380.sp,

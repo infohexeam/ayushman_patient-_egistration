@@ -41,12 +41,12 @@ class Validators {
 
   //check is the given string is email or not
   static String? isEMail({required String? value}) {
-    if (((value ?? "").isEmpty) || value == null) {
-      return "Email is required";
-    } else if (!RegExp(
-            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-        .hasMatch(value)) {
-      return "Please enter a valid email";
+    if ((value ?? "").isNotEmpty) {
+      if (!RegExp(
+              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+          .hasMatch(value ?? "")) {
+        return "Please enter a valid email";
+      }
     } else {
       return null;
     }

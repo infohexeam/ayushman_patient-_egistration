@@ -158,7 +158,7 @@ class AppDatePickerFormField extends StatelessWidget {
               : () async {
                   DateTime? date = await showDatePicker(
                       context: context,
-                      firstDate: startDate ?? DateTime(1998),
+                      firstDate: startDate ?? DateTime(1900),
                       lastDate: lastDate ?? DateTime.now(),
                       initialEntryMode: DatePickerEntryMode.calendarOnly,
                       helpText: label,
